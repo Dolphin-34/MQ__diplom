@@ -184,10 +184,14 @@ body {
 
 .trends__card {
     display: flex;
-    width: 25%;
-    position: relative; 
+    width: 100%;
     margin-right: 4px;
 
+    position: relative;
+}
+
+.content__trends {
+z-index: 2;
 }
 
 .trends__card::after {
@@ -243,12 +247,11 @@ body {
     background-size: cover;
 }
 
-.content__trends {
+.content__card {
     display: block;
-    position: absolute;
     margin: 156px 20px 15px 17px;
     z-index: 2;
-
+    
     border: #b59f5b solid 2px;
     padding: 38px 96px 32px 33px;
 }
