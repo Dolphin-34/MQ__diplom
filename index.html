@@ -17,6 +17,11 @@
                     </a>
                 </div>
                 <nav class="nav__header">
+                    <div class="menu-btn">
+                        <div class="menu__btn-one"></div>
+                        <div class="menu__btn-two"></div>
+                        <div class="menu__btn-three"></div>
+                    </div>
                     <ul class="menu__header-ul">
                         <li class="menu__li">
                             <a href="#" class="menu__link">Главная</a>
@@ -121,7 +126,7 @@
 
             <article class="post__main">
                 <div class="image">
-                    <img src="img/last-post1.jpg" alt="Человек на пляже">
+                    <img src="img/last-post1.jpg" class="image__post" alt="Человек на пляже">
                 </div>
                 <div class="content">
                     <ul class="category__ul">
@@ -147,7 +152,7 @@
 
             <article class="post__main">
                 <div class="image">
-                    <img src="img/last-post2.jpg" alt="Девушка занимается йогой">
+                    <img src="img/last-post2.jpg" class="image__post" alt="Девушка занимается йогой">
                 </div>
                 <div class="content">
                     <ul class="category__ul">
@@ -173,7 +178,7 @@
 
             <article class="post__main">
                 <div class="image">
-                    <img src="img/last-post3.jpg" alt="Девушка на концерте">
+                    <img src="img/last-post3.jpg" class="image__post" alt="Девушка на концерте">
                 </div>
                 <div class="content">
                     <ul class="category__ul">
@@ -197,7 +202,7 @@
 
             <article class="post__main">
                 <div class="image">
-                    <img src="img/last-post4.jpg" alt="Завтрак на столе">
+                    <img src="img/last-post4.jpg" class="image__post" alt="Завтрак на столе">
                 </div>
                 <div class="content">
                     <ul class="category__ul">
@@ -221,9 +226,9 @@
                 </div>
             </article>
 
-            <article class="post__main">
+            <article class="post__main post__main-line">
                 <div class="image">
-                    <img src="img/last-post5.jpg" alt="Подушка на стуле">
+                    <img src="img/last-post5.jpg" class="image__post" alt="Подушка на стуле">
                 </div>
                 <div class="content">
                     <ul class="category__ul">
@@ -405,61 +410,80 @@
         </div>
         <div class="goods__wrp-card">
 
-            <article class="goods__card">
-                    <img src="img/shop-item-desk1.jpg" alt="Подушка на диване">
-                <div class="content__goods">
-                    <h3 class="title__goods">
-                        <a href="" class="title__goods-link">Подушки на диван</a>
-                    </h3>
-                    <p class="text__goods">
-                        Набор из двух подушек с модными принтами. Видео о создании <a href="#" class="goods__link">здесь</a>
-                    </p>
-                    <div class="price__goods">
-                        <p class="old__price">1000Р</p>
-                        <p class="actual__price">800Р</p>
-                        <button class="button__buy">В магазин</button>
+            <div class="goods__card-wrp">
+                <article class="goods__card">
+                    <picture>
+                        <source media="(min-width: 641px) and (max-width: 1199px)" srcset="img/shop-item-tablet1.jpg">
+                        <source media="(max-width: 640px)" srcset="img/shop-item-mobile1.jpg">
+                        <img src="img/shop-item-desk1.jpg" class="image__card" alt="Подушка на диване">
+                    </picture>
+                    <div class="content__goods">
+                        <h3 class="title__goods">
+                            <a href="" class="title__goods-link">Подушки на диван</a>
+                        </h3>
+                        <p class="text__goods">
+                            Набор из двух подушек с модными принтами. Видео о создании <a href="#" class="goods__link">здесь</a>
+                        </p>
+                        <div class="price__goods">
+                            <div class="price">
+                                <p class="old__price">1000Р</p>
+                                <p class="actual__price">800Р</p>
+                            </div>
+                            <button class="button__buy">В магазин</button>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
+            </div>
 
-            <article class="goods__card">
-                <div class="goods__image">
-                    <img src="img/shop-item-desk2.jpg" alt="Кукла "Зайчик"">
-                </div>
-                <div class="content__goods">
-                    <h3 class="title__goods">
-                        <a href="" class="title__goods-link">Кукла «Зайчик»</a>
-                    </h3>
-                    <p class="text__goods">
-                        Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#" class="goods__link">весенняя серия постов</a> в блоге и несколько подкастов.
-                    </p>
-                    <div class="price__goods">
-                        <p class="old__price">5000Р</p>
-                        <p class="actual__price">3400Р</p>
-                        <button class="button__buy">В магазин</button>
+            <div class="goods__card-wrp">
+                <article class="goods__card">
+                    <picture>
+                        <source media="(min-width: 641px) and (max-width: 1199px)" srcset="img/shop-item-tablet2.jpg">
+                        <source media="(max-width: 640px)" srcset="img/shop-item-mobile2.jpg">
+                        <img src="img/shop-item-desk2.jpg" class="image__card" alt="Подушка на диване">
+                    </picture>
+                    <div class="content__goods">
+                        <h3 class="title__goods">
+                            <a href="" class="title__goods-link">Кукла «Зайчик»</a>
+                        </h3>
+                        <p class="text__goods">
+                            Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#" class="goods__link">весенняя серия постов</a> в блоге и несколько подкастов.
+                        </p>
+                        <div class="price__goods">
+                            <div class="price">
+                                <p class="old__price">5000Р</p>
+                                <p class="actual__price">3400Р</p>
+                            </div>
+                            <button class="button__buy">В магазин</button>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
+            </div>
 
-            <article class="goods__card">
-                <div class="goods__image">
-                    <img src="img/shop-item-desk3.jpg" alt="Шестиугольная рамка">
-                </div>
-                <div class="content__goods">
-                    <h3 class="title__goods">
-                        <a href="" class="title__goods-link">Шестиугольная рамка</a>
-                    </h3>
-                    <p class="text__goods">
-                        Необычная рамка для украшения дома из видео <a href="#" class="goods__link">«Как сделать рамку из подручных средств за 30 минут»</a>
-                    </p>
-                    <div class="price__goods">
-                        <p class="old__price">500Р</p>
-                        <p class="actual__price">400Р</p>
-                        <button class="button__buy">В магазин</button>
-                    </div>
-                </div>
-            </article>
-
+            <div class="goods__card-wrp">
+                <article class="goods__card">
+                    <picture>
+                        <source media="(min-width: 641px) and (max-width: 1199px)" srcset="img/shop-item-tablet3.jpg">
+                        <source media="(max-width: 640px)" srcset="img/shop-item-mobile3.jpg">
+                        <img src="img/shop-item-desk3.jpg" class="image__card" alt="Подушка на диване">
+                    </picture>
+                    <div class="content__goods">
+                        <h3 class="title__goods">
+                            <a href="" class="title__goods-link">Шестиугольная рамка</a>
+                        </h3>
+                        <p class="text__goods">
+                            Необычная рамка для украшения дома из видео <a href="#" class="goods__link">«Как сделать рамку из подручных средств за 30 минут»</a>
+                        </p>
+                        <div class="price__goods">
+                            <div class="price">
+                                <p class="old__price">500Р</p>
+                                <p class="actual__price">400Р</p>
+                            </div>
+                            <button class="button__buy">В магазин</button>
+                        </div>
+                    </div> 
+                </article>
+            </div>
         </div>
     </div>
 
