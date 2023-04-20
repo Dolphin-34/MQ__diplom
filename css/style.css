@@ -741,7 +741,7 @@ a {
         color: #999999;
     }
 
-@media (min-width: 641px) and (max-width: 1199px) {
+@media (min-width: 641px) and (max-width: 1199px), (orientation: portrait)  {
     
     /* Header */ 
 
@@ -785,7 +785,7 @@ a {
         justify-content: space-between;
         max-width: 698px;
         margin: 0 auto;
-        padding: 63px 15px 0;
+        padding: 63px 35px 0;
     }
 
     /* -- Main -- */ 
@@ -848,10 +848,12 @@ a {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        margin: 0 35px;
     }
 
     .goods__card-wrapper {
-        width: 100%;
+        width: calc((100% - 100px) / 2);
+        max-width: 100%;
     }
 
     .goods__card-wrapper:nth-child(1n+3) {
@@ -859,68 +861,160 @@ a {
     }
 
     .goods__card-wrapper::after {
-        top: 195px;
+        top: 180px;
     }
 
-    .goods__card {
-       width: 100%;
-    } 
-
-    .content__goods {
+    .image__card {
+        display: block;
         width: 100%;
     }
 
     /*  Footer */
 
     .wrapper__footer {
-        max-width: 1200px;
+        max-width: 698px;
         margin: 0 auto;
     }
 
-    /* --- Content footer --- */
-
-    .content__footer {
-        background: #f4f7f6;
-        padding: 30px 0;
+    .content__footer-wrp {
+        margin: 0 35px;
     }
+}
 
-    .footer__list{
-        display: flex;
-        justify-content: center;
-    }
+/* @media (min-width: 641px) and (max-width: 1199px), (orientation: landscape) {
+    
+} */
 
-    .social {
-        display: inherit;
-        width: 20px;
-        height: 20px;
-        padding: 0 30px;
+
+@media (max-width: 640px) {
         
-        background-repeat: no-repeat;
-        background-size: 18px;
-        background-position: center;
+    /* Header */ 
+
+    .header {
+        max-width: 329px;
+        background-image: url(../img/banner-mobile.jpg);
     }
 
-    .social__dribbble {
-        background-image: url(../svg/001-dribbble.svg);
+    /* --- Menu header --- */ 
+
+    .menu__header-ul {
+        display: none;
     }
 
-    .social__pinterest {
-        background-image: url(../svg/002-pinterest.svg);
+    .menu__btn-one, .menu__btn-two, .menu__btn-three {
+        width: 23px;
+        height: 3px;
+        background-color: #ffffff;
+        margin-bottom: 5px;
+    }  
+
+    /* Trends wrapper */
+
+    .trends__wrp {
+        max-width: 329px;
     }
 
-    .social__tumblr {
-        background-image: url(../svg/003-tumblr.svg);
+    .trends__card {
+        width: 100%;
+    }
+    
+    /* Wrapper main */
+
+    .wrapper__main {
+        display: block;
+        padding: 44px 15px 0;
     }
 
-    /* --- Footer copyright --- */
+    /* -- Main -- */ 
 
-    .text__footer {
-        font-family: "OpenSans-b_woff2", sans-serif;
-        margin: 74px 0 40px 0;
-        text-align: center;
-        font-size: 12px;
-        color: #999999;
+    .main {
+        margin: 0 auto;
     }
 
-   
+    /* -- Post main -- */
+
+    .post__main {
+        max-width: 329px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .post__main:nth-child(n+2) {
+        margin-top: 41px;
+    }
+
+    .image__post {
+        width: 100%;
+    }
+
+    .content {
+        width: 100%;
+        margin: 16px 0 0 0;
+    }
+
+    .post__main::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        margin-top: 23px;
+        background-color: #eeeeee;
+    }
+
+    .post__main-line::after {
+        display: none;
+    }
+    
+    /* -Aside- */
+
+    .aside {
+        max-width: 286px;
+        margin: 0 0 0 35px;
+    }
+
+    /* Wrapper goods */
+
+    /* --- Goods card --- */
+
+    .goods__wrp {
+        max-width: 329px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .goods__wrp-card {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 35px;
+    }
+
+    .goods__card-wrapper {
+        width: calc((100% - 100px) / 2);
+        max-width: 100%;
+    }
+
+    .goods__card-wrapper:nth-child(1n+3) {
+        margin-top: 28px;
+    }
+
+    .goods__card-wrapper::after {
+        top: 180px;
+    }
+
+    .image__card {
+        display: block;
+        width: 100%;
+    }
+
+    /*  Footer */
+
+    .wrapper__footer {
+        max-width: 329px;
+        margin: 0 auto;
+    }
+
+    .content__footer-wrp {
+        margin: 0 35px;
+    }
 }
