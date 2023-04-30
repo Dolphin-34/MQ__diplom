@@ -631,6 +631,7 @@ a {
         z-index: 2;
         outline: 3px solid #b59f5b;
         outline-offset: 21px;
+        margin-top: -12px;
     }
 
 
@@ -692,7 +693,7 @@ a {
     /* --- Content footer --- */
 
     .content__footer {
-        margin-top: 64px;
+        margin-top: 93px;
         background: #f4f7f6;
         padding: 30px 0;
     }
@@ -733,6 +734,152 @@ a {
         text-align: center;
         font-size: 12px;
         color: #999999;
+    }
+
+    /* ---- Popup ---- */
+
+    .popup-wrp {
+        content: "";
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        z-index: 5;
+    }
+
+    .popup {
+        font-size: 13px;
+        min-height: 585px;
+        max-width: 390px;
+        background-color: #ffffff;
+        padding: 55px 30px;
+        position: relative;
+        margin-bottom: 60px;
+    }
+
+    .title-pop {
+        font-family: "OpenSans-b_woff2";
+        font-size: 20px;
+        line-height: 29px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .title-pop:after {
+        content: "";
+        display: block;
+        margin: 12px auto 30px auto;
+        width: 66px;
+        height: 3px;
+        background: #b59f5b;
+    }
+
+    .select-wrp {
+        position: relative;
+    }
+
+    .select-wrp:before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-image: url(../svg/form-arrows.svg);
+        background-repeat: no-repeat;
+        background-size: 10px;
+        position: absolute;
+        right: 0px;
+        top: 22px;
+    }
+
+    .select {
+        box-sizing: border-box;
+        padding-left: 18px;
+        width: 100%;
+        height: 40px;
+        font-size: 13px;
+        border: none;
+        background-color: #f4f7f6;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        margin-bottom: 33px;
+        margin-top: 12px;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .radio-group {
+        margin-bottom: 33px;
+    }
+
+    fieldset {
+        border: none;
+    }
+
+    .radio {
+        width: 0;
+        height: 0;
+        z-index: -1;
+        position: relative;
+    }
+
+    .new-radio {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-image: url(../svg/form-empty-circle.svg);
+        background-size: 15px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-right: 5px;
+        vertical-align: text-top;
+    }
+
+    .radio:checked + .new-radio {
+        background-image: url(../svg/form-circle.svg);
+    }
+
+    .text-area {
+        min-height: 130px;
+        resize: none;
+        width: 100%;
+        background-color: #f4f7f6;
+        outline: none;
+        border: none;
+        margin-top: 10px;
+        font-size: inherit;
+    }
+
+    .send {
+        width: 100%;
+        min-height: 50px;
+        background-color: #b59f5b;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 700;
+        border: none;
+    }
+
+    .btn-close-new {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: -27px;
+        right: 0;
+        cursor: pointer;
+    }
+
+    .btn-close {
+        width: 0;
+        height: 0;
+        z-index: -1;
+        position: absolute;
     }
 
 @media (min-width: 641px) and (max-width: 1199px), (orientation: portrait)  {
@@ -777,7 +924,6 @@ a {
     .wrapper__main {
         display: flex;
         justify-content: space-between;
-        max-width: 698px;
         margin: 0 auto;
         padding: 63px 35px 0;
     }
@@ -797,6 +943,10 @@ a {
 
     .post__main:nth-child(n+2) {
         margin-top: 41px;
+    }
+
+    .image {
+        width: 100%;
     }
 
     .image__post {
@@ -824,6 +974,7 @@ a {
     /* -Aside- */
 
     .aside {
+        width: 61%;
         margin: 0 0 0 35px;
     }
 
@@ -832,7 +983,6 @@ a {
     /* --- Goods card --- */
 
     .goods__wrp {
-        max-width: 698px;
         margin: 0 auto;
         padding: 0;
     }
@@ -841,42 +991,46 @@ a {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin: 0 35px;
+        margin: 0 56px;
     }
 
     .goods__card-wrapper {
         width: calc((100% - 100px) / 2);
-        max-width: 100%;
     }
 
     .goods__card-wrapper:nth-child(1n+3) {
-       margin-top: 28px;
+       margin-top: 50px;
     }
 
-    .goods__card-wrapper::after {
-        top: 180px;
+    .goods__card {
+        max-width: 100%;
     }
+
+    /* .goods__card-wrapper::after {
+        top: 180px;
+    } */
 
     .image__card {
         display: block;
         width: 100%;
     }
 
+    .content__goods {
+        width: 100%;
+    }
+
     /*  Footer */
 
     .wrapper__footer {
-        max-width: 698px;
         margin: 0 auto;
     }
 
     .content__footer-wrp {
         margin: 0 35px;
     }
+
 }
 
-/* @media (min-width: 641px) and (max-width: 1199px), (orientation: landscape) {
-    
-} */
 
 
 @media (max-width: 640px) {
@@ -908,6 +1062,10 @@ a {
 
     .intro__header {
         padding: 0 0 13.5em 0;
+    }
+
+    .intro__header-text {
+        font-size: 26px;
     }
 
     /* Trends card */
@@ -977,8 +1135,9 @@ a {
     /* --- Goods card --- */
 
     .goods__wrp {
-        margin: 0 15px;
+        margin: 0 40px;
         padding: 0;
+        align-items: center;
     }
 
     .goods__wrp-card {
@@ -986,24 +1145,13 @@ a {
     }
 
     .goods__card-wrapper {
+        display: block;
         width: 100%;
+        margin: 0 auto;
     }
 
     .goods__card-wrapper:nth-child(1n+2) {
-        margin-top: 26px;
-    }
-
-    .goods__card {
-        max-width: 100%;
-    }
-
-    /* .goods__card-wrapper::after {
-        top: 180px;
-    } */
-
-    .image__card {
-        display: block;
-        width: 100%;
+        margin-top: 50px;
     }
 
     /*  Footer */
@@ -1015,4 +1163,9 @@ a {
     .content__footer-wrp {
         margin: 0 15px;
     }
+
+    .popup {
+        width: 330px;
+    }
+    
 }
