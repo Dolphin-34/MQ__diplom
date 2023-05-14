@@ -94,7 +94,7 @@ a {
 
     .content__header {
         position: relative;
-        padding: 29px;
+        padding: 29px 15px;
         max-width: 1200px;
         margin: 0 auto;
         z-index: 2;
@@ -102,7 +102,6 @@ a {
 
     .menu__header {
         display: flex;
-        padding: 0 15px;
         justify-content: space-between;
         align-items: center;
     }
@@ -245,6 +244,7 @@ a {
         z-index: 2;
         
         border: #b59f5b solid 2px;
+        width: 100%;
         padding: 38px 32px 33px;
     }
  
@@ -297,6 +297,10 @@ a {
 
     .post__main:nth-child(n+2) {
         margin-top: 60px;
+    }
+
+    .image__post {
+        width: 381px;
     }
 
     .content {
@@ -355,14 +359,14 @@ a {
         margin: 63px 0 0 120px;
     }
 
-    .news__title {
+    .aside__title{
         font-family: "OpenSans-b_woff2", sans-serif;
         text-align: center;
         font-size: 14px;
         text-transform: uppercase;
     }
 
-    .news__title::after {
+    .aside__title::after {
         content: ' ';
         display: block;
         width: 66px;
@@ -374,6 +378,10 @@ a {
     .news__aside {
         display: flex;
         margin-top: 28px;
+    }
+
+    .image__aside-post {
+        width: 70px;
     }
 
     .content__aside {
@@ -438,22 +446,6 @@ a {
         margin: 62px 0 0 0;
     }
 
-    .mailing__title {
-        font-family: "OpenSans-b_woff2", sans-serif;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 14px;
-    }
-
-    .mailing__title::after {
-        content: ' ';
-        display: block;
-        width: 66px;
-        height: 3px;
-        margin: 14px 0 0 102px;
-        background: #b59f5b;
-    }
-
     .mailing__aside {
         margin: 22px 0 0 0;
         width: 100%;
@@ -492,22 +484,6 @@ a {
         margin: 60px 0 0 0;
     }
 
-    .tegs__title {
-        font-family: "OpenSans-b_woff2", sans-serif;;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 14px;
-    }
-
-    .tegs__title::after {
-        content: ' ';
-        display: block;
-        width: 66px;
-        height: 3px;
-        margin: 14px 0 0 102px;
-        background: #b59f5b;
-    }
-
     .teg__list {
         display: flex;
         flex-wrap: wrap;
@@ -535,22 +511,6 @@ a {
 
     .themes {
         margin: 60px 0 0 0;
-    }
-
-    .themes__title {
-        font-family: "OpenSans-b_woff2", sans-serif;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 14px;
-    }
-
-    .themes__title::after {
-        content: ' ';
-        display: block;
-        width: 66px;
-        height: 3px;
-        margin: 14px 0 0 102px;
-        background: #b59f5b;
     }
 
     .themes__list {
@@ -974,7 +934,6 @@ a {
     /* -Aside- */
 
     .aside {
-        width: 61%;
         margin: 0 0 0 35px;
     }
 
@@ -1006,10 +965,6 @@ a {
         max-width: 100%;
     }
 
-    /* .goods__card-wrapper::after {
-        top: 180px;
-    } */
-
     .image__card {
         display: block;
         width: 100%;
@@ -1031,7 +986,69 @@ a {
 
 }
 
+@media (max-height: 640px) and (max-width: 1024px) and (orientation: landscape) {
 
+    /* --- Trends --- */
+
+    .card__wrp {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .trends__card {
+        max-width: calc((100vw - 3px) / 2);
+    }
+
+    /* --- Goods --- */
+
+    .goods__card {
+        max-width: 100%;
+    }
+
+    .image__card {
+        display: block;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 1199px) and (orientation: landscape) {
+
+
+    /* --- Menu header --- */ 
+
+    .menu__header-ul {
+        display: none;
+    }
+
+    .menu__btn-one, .menu__btn-two, .menu__btn-three {
+        width: 23px;
+        height: 3px;
+        background-color: #ffffff;
+        margin-bottom: 5px;
+    }  
+
+    /* --- Trends --- */
+
+    .content__card {
+        padding: 38px 18px 33px;
+    }
+
+    .trends__card {
+        margin-bottom: 3px;
+    }
+
+    .image__post {
+        width: 100%;
+    }
+
+    /* ---- Goods ---- */
+
+    .goods__card-wrapper {
+        display: block;
+        width: 100%;
+    }
+}
 
 @media (max-width: 640px) {
         
@@ -1069,6 +1086,10 @@ a {
     }
 
     /* Trends card */
+
+    .card__wrp {
+        flex-wrap: wrap;
+    }
 
     .trends__card {
         width: 100%;
@@ -1141,6 +1162,7 @@ a {
     }
 
     .goods__wrp-card {
+        display: block;
         margin: 0;
     }
 
@@ -1167,5 +1189,6 @@ a {
     .popup {
         width: 330px;
     }
-    
 }
+
+
